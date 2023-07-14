@@ -49,7 +49,11 @@ public class StudentService {
 
 
 
-    public void addNewStudent(Student student) {
+    public Student getStudentByAddress(String Address){ 
+        return studentRepository.findStudentByAddress(Address).get();
+    }
+
+    public void createNewStudent(Student student) {
 
         Optional<Student> studentOptional = studentRepository
          .findStudentByEmail(student.getEmail());

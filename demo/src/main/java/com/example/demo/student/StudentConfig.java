@@ -18,14 +18,18 @@ public class StudentConfig {
                 "Sauni",
                 "sauni@gmail.com",
                 "0112765198",
-                LocalDate.of(2000, Month.JANUARY, 5)
+                LocalDate.of(2000, Month.JANUARY, 5),
+                "address1"
+     
             );
 
             Student alex = new Student (
                 "Alex",
                 "alex@gmail.com",
                 "0773649517",
-                LocalDate.of(2004, Month.FEBRUARY, 5)
+                LocalDate.of(2004, Month.FEBRUARY, 5),
+                "address2"
+                
             );
 
             repository.saveAll(

@@ -34,6 +34,11 @@ public class StudentController {
 	public Student getStudentById (@PathVariable("id") Long id) {
        return studentService.getStudentById(id);
 	} */
+	
+    @GetMapping("{address}")
+	public Student getStudentById (@PathVariable("address") String address) {
+       return studentService.getStudentByAddress(address);
+	}
 
 
     @GetMapping(path = "{studentId}")
@@ -42,8 +47,8 @@ public class StudentController {
 	}
 
     @PostMapping
-    public void registerNewStudent (@RequestBody Student student){
-        studentService.addNewStudent(student);
+    public void createNewStudent (@RequestBody Student student){
+        studentService.createNewStudent(student);
     }
 
     @DeleteMapping(path = "{studentId}")
