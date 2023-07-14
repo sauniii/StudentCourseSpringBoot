@@ -15,5 +15,7 @@ public interface StudentRepository
                 Optional<Student> findStudentByEmail(String email);
 
                 Optional<Student> findStudentByAddress(String address);
+
+                Optional<Student> findStudentByPhone(String phone);
        
 }

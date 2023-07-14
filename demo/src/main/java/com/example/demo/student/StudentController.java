@@ -35,9 +35,14 @@ public class StudentController {
        return studentService.getStudentById(id);
 	} */
 	
-    @GetMapping("{address}")
-	public Student getStudentById (@PathVariable("address") String address) {
+    @GetMapping("address/{address}")
+	public Student getStudentByAddress (@PathVariable("address") String address) {
        return studentService.getStudentByAddress(address);
+	}
+
+    @GetMapping("phone/{phone}")
+	public Student getStudentByPhone (@PathVariable("phone") String phone) {
+       return studentService.getStudentByPhone(phone);
 	}
 
 
