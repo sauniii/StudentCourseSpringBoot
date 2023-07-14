@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Set;
 
+import org.springframework.boot.autoconfigure.amqp.RabbitConnectionDetails.Address;
+
 import com.example.demo.course.Course;
 
 import jakarta.persistence.*;
@@ -11,6 +13,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table
+
 public class Student {
     @Id
     @SequenceGenerator( name = "student_sequence", 
@@ -27,6 +30,7 @@ public class Student {
     private String name;
     private String email;
     private LocalDate dob;
+    private String address;
 
     @Transient
     private Integer age;
@@ -35,18 +39,20 @@ public class Student {
         
     }
 
-    public Student(Long id, String name, String email, LocalDate dob){
+    public Student(Long id, String name, String email, LocalDate dob,String address){
         this.id = id;
         this.name = name;
         this.email = email;
         this.dob = dob;
+        this.address=address;
 
     }
 
-    public Student( String name, String email, LocalDate dob){
+    public Student( String name, String email, LocalDate dob,String address){
         this.name = name;
         this.email = email;
         this.dob = dob;
+        this.address=address;
 
     }
 

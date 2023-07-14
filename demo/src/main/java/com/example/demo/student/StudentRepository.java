@@ -13,5 +13,7 @@ public interface StudentRepository
 
                 @Query("SELECT s FROM Student s WHERE s.email = ?1")
                 Optional<Student> findStudentByEmail(String email);
+
+                Optional<Student> findStudentByAddress(String address);
        
 }
