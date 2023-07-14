@@ -30,10 +30,11 @@ public class StudentController {
        return studentService.getStudents();
              
 	}
-    @GetMapping("{id}")
+   /*  @GetMapping("{id}")
 	public Student getStudentById (@PathVariable("id") Long id) {
        return studentService.getStudentById(id);
-	}
+	} */
+	
     @GetMapping("{address}")
 	public Student getStudentById (@PathVariable("address") String address) {
        return studentService.getStudentByAddress(address);
@@ -62,9 +63,10 @@ public class StudentController {
         @PathVariable("studentId") Long studentId,
         @RequestParam(required = false) String name,
         @RequestParam(required = false) String email,
+        @RequestParam(required = false) String phone,
         @RequestParam(required = false) String cid) {
         
-            studentService.updateStudent(studentId,name,email,cid);
+            studentService.updateStudent(studentId,name,email,phone, cid);
         }
 
 }
