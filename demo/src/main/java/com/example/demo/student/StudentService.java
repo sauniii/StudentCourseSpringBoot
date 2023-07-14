@@ -25,9 +25,30 @@ public class StudentService {
         this.studentRepository = studentRepository;
     }
    
+    //get the list of students
     public List<Student> getStudents(){ 
         return studentRepository.findAll();
     }
+
+    //get only one student
+    public Student getOneStudent(Long studentId) {
+
+        //check if the student exits
+        boolean exists = studentRepository.existsById(studentId);
+        if(!exists){
+            throw new IllegalStateException(
+                "Student with id " + studentId + " does not exists"
+            );
+        }
+
+        Optional<Student> studentOptional = studentRepository.findStudentById(studentId);
+
+        return studentOptional.orElse(null);
+    } 
+
+
+
+
 
     public void addNewStudent(Student student) {
 
@@ -90,6 +111,7 @@ public class StudentService {
 
             studentRepository.save(student);
     }
+
 
 
 
