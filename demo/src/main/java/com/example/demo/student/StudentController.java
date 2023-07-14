@@ -40,6 +40,11 @@ public class StudentController {
 	}
 
 
+    @GetMapping(path = "{studentId}")
+	public Student getOneStudent (@PathVariable("studentId") Long studentId) {
+       return studentService.getOneStudent(studentId);
+	}
+
     @PostMapping
     public void createNewStudent (@RequestBody Student student){
         studentService.createNewStudent(student);
