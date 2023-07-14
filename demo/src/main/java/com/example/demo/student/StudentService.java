@@ -41,9 +41,8 @@ public class StudentService {
             );
         }
 
-        Optional<Student> studentOptional = studentRepository.findStudentById(studentId);
+       return studentRepository.findById(studentId).get();
 
-        return studentOptional.orElse(null);
     } 
 
 
