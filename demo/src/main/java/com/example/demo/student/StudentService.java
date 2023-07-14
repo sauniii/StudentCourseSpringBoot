@@ -121,6 +121,10 @@ public class StudentService {
             studentRepository.save(student);
     }
 
+    public Student getStudentByPhone(String phone) {
+        return studentRepository.findStudentByPhone(phone).get();
+    }
+
 
 
 
