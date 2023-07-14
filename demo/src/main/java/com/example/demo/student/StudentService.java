@@ -78,6 +78,7 @@ public class StudentService {
     public void updateStudent(  Long studentId, 
                                 String name, 
                                 String email,
+                                String phone,
                                 String courseId) {
         Student student = studentRepository.findById(studentId)
         .orElseThrow(() -> new IllegalStateException (
@@ -98,6 +99,11 @@ public class StudentService {
                     throw new IllegalStateException("Email is taken");
                 }
                 student.setEmail(email);
+            }
+
+            if (phone != null && 
+            phone.length() > 0 && !Objects.equals(student.getPhone(), phone)){
+                student.setPhone(phone);
             }
 
             // Get the course with the specified courseId

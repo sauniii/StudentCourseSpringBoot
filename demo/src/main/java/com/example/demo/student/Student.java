@@ -26,6 +26,7 @@ public class Student {
     private Long id;
     private String name;
     private String email;
+    private String phone;
     private LocalDate dob;
 
     @Transient
@@ -35,19 +36,20 @@ public class Student {
         
     }
 
-    public Student(Long id, String name, String email, LocalDate dob){
+    public Student(Long id, String name, String email, String phone, LocalDate dob) {
         this.id = id;
         this.name = name;
         this.email = email;
+        this.phone = phone;
         this.dob = dob;
-
     }
 
-    public Student( String name, String email, LocalDate dob){
+
+    public Student( String name, String email,String phone, LocalDate dob){
         this.name = name;
         this.email = email;
         this.dob = dob;
-
+       this.phone = phone;
     }
 
     public Long getId() {
@@ -108,6 +110,14 @@ public class Student {
     @Override
     public String toString() {
         return "Student [id=" + id + ", name=" + name + ", email=" + email + ", dob=" + dob + ", age=" + age + "]";
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
 
