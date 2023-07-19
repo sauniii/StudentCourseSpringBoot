@@ -8,9 +8,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import "../CSS/modal.css";
 
 const studentSchema = yup.object().shape({
-  name: yup.string().required("Name is required"),
-  email: yup.string().email("Invalid email").required("Email is required"),
-  dob: yup.date().required("Date of Birth is required"),
+  name:yup.string().required("Name is required"),
+  email:yup.string().email("Invalid email").required("Email is required"),
+  dob:yup.date().required("Date of Birth is required") .typeError("Invalid date format"),
+  
 });
 
 interface Student {
@@ -49,7 +50,6 @@ export default function Student() {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm({
     resolver: yupResolver(studentSchema),
   });
@@ -60,13 +60,6 @@ export default function Student() {
     setIsOpenView(false);
   };
 
-  const handleInsertChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormValues((prevValues: any) => ({
-      ...prevValues,
-      [name]: name === "dob" ? new Date(value) : value, // Convert dob to a Date object if name is 'dob'
-    }));
-  };
 
   const handleSubmitForm = async (data: StudentFormData) => {
     console.log(data);
@@ -74,7 +67,7 @@ export default function Student() {
       console.log("We are here");
       await axios.post("http://localhost:8080/api/v1/student", data);
       handleCloseModal();
-      //  window.location.reload();
+       window.location.reload();
     } catch (error) {
       console.error("Error saving student data:", error);
     }
