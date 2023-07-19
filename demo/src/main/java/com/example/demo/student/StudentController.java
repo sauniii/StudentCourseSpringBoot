@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,7 +29,12 @@ public class StudentController {
 
     @GetMapping
     public List<Student> getStudents() {
-        return studentService.getStudents();
+        try {
+            return studentService.getStudents();
+        } catch (Exception e) {
+            ResponseEntity.ok("Unsuccessful");
+            return null;
+        }
 
     }
     /*
@@ -48,30 +55,53 @@ public class StudentController {
     }
 
     @GetMapping(path = "{studentId}")
-    public Student getOneStudent(@PathVariable("studentId") Long studentId) {
-        return studentService.getOneStudent(studentId);
+    public ResponseEntity<Student> getOneStudent(@PathVariable("studentId") Long studentId) {
+        try {
+            Student student = studentService.getOneStudent(studentId);
+            return ResponseEntity.ok(student);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+
     }
 
     @PostMapping
-    public void createNewStudent(@RequestBody Student student) {
-        studentService.createNewStudent(student);
+    public ResponseEntity<String> createNewStudent(@RequestBody Student student) {
+        try {
+            studentService.createNewStudent(student);
+            return ResponseEntity.ok("Student inserted successfully");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Failed to insert student. Please try again later.");
+        }
     }
 
     @DeleteMapping(path = "{studentId}")
-    public void deleteStudent(
-            @PathVariable("studentId") Long studentId) {
-        studentService.deleteStudent(studentId);
+    public ResponseEntity<String> deleteStudent(@PathVariable("studentId") Long studentId) {
+        try {
+            studentService.deleteStudent(studentId);
+            return ResponseEntity.ok("Deleted Successfully");
+        } catch (Exception e) {
+            return ResponseEntity.ok("Deleting unuccessful");
+        }
+
     }
 
     @PutMapping(path = "{studentId}")
-    public void updateStudent(
+    public ResponseEntity<String> updateStudent(
             @PathVariable("studentId") Long studentId,
             @RequestParam(required = false) String name,
             @RequestParam(required = false) String email,
             @RequestParam(required = false) LocalDate dob,
             @RequestParam(required = false) String phone) {
 
-        studentService.updateStudent(studentId, name, email, dob, phone);
+        try {
+            studentService.updateStudent(studentId, name, email, dob, phone);
+            return ResponseEntity.ok("Updated Successfuly");
+        } catch (Exception e) {
+            return ResponseEntity.ok("Updating unsuccessful");
+        }
+
     }
 
     @PutMapping(path = "courses/{studentId}")
