@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path ="api/v1/course")
+@RequestMapping(path = "api/v1/course")
 public class CourseController {
-    
+
     private final CourseService courseService;
 
     @Autowired
@@ -25,7 +25,7 @@ public class CourseController {
     }
 
     @GetMapping
-    public List<Course> getCourses () {
+    public List<Course> getCourses() {
         return courseService.getCourses();
     }
 
@@ -35,16 +35,16 @@ public class CourseController {
     }
 
     @DeleteMapping(path = "{cid}")
-    public void deleteCourse (
-        @PathVariable("cid") Long cid) {
-            courseService.deleteCourse(cid);
-        }
-    
+    public void deleteCourse(
+            @PathVariable("cid") Long cid) {
+        courseService.deleteCourse(cid);
+    }
+
     @PutMapping(path = "{cid}")
-    public void updateCourse (
-        @PathVariable("cid") Long cid,
-        @RequestParam(required = false) String cname,
-        @RequestParam(required = false, defaultValue="0") int credit) {
-            courseService.updateCourse(cid, cname, credit);
-        }
+    public void updateCourse(
+            @PathVariable("cid") Long cid,
+            @RequestParam(required = false) String cname,
+            @RequestParam(required = false, defaultValue = "0") int credit) {
+        courseService.updateCourse(cid, cname, credit);
+    }
 }

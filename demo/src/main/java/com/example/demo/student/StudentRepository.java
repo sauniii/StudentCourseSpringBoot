@@ -5,17 +5,15 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
-
-
 @Repository
-public interface StudentRepository 
-        extends JpaRepository<Student, Long> {
+public interface StudentRepository
+                extends JpaRepository<Student, Long> {
 
-                @Query("SELECT s FROM Student s WHERE s.email = ?1")
-                Optional<Student> findStudentByEmail(String email);
+        @Query("SELECT s FROM Student s WHERE s.email = ?1")
+        Optional<Student> findStudentByEmail(String email);
 
-                Optional<Student> findStudentByAddress(String address);
+        Optional<Student> findStudentByAddress(String address);
 
-                Optional<Student> findStudentByPhone(String phone);
-       
+        Optional<Student> findStudentByPhone(String phone);
+
 }

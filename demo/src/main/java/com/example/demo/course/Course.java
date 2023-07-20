@@ -4,28 +4,20 @@ import java.util.Set;
 
 import jakarta.persistence.*;
 import com.example.demo.student.Student;
- 
 
 @Entity
 @Table
 public class Course {
-    
+
     @Id
-    @SequenceGenerator (name = "course_sequence",
-                        sequenceName= "course_sequence",
-                        allocationSize =1)
+    @SequenceGenerator(name = "course_sequence", sequenceName = "course_sequence", allocationSize = 1)
 
-    @GeneratedValue(
-        strategy = GenerationType.SEQUENCE,
-        generator = "course_sequence"
-    )
-
-
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "course_sequence")
 
     private Long cid;
     private String cname;
     private int credit;
-    
+
     public Course() {
     }
 
@@ -39,7 +31,6 @@ public class Course {
         this.cname = cname;
         this.credit = credit;
     }
-
 
     public Long getCid() {
         return cid;
@@ -70,19 +61,17 @@ public class Course {
         return "Course [cid=" + cid + ", cname=" + cname + ", credit=" + credit + "]";
     }
 
+    @ManyToMany(mappedBy = "myCourses")
+    Set<Student> likes;
 
-    @ManyToMany (mappedBy = "myCourses")
-    Set <Student> likes;
-    
-    /* 
-    public Set<Student> getLikes() {
-        return likes;
-    }
-
-    public void setLikes(Set<Student> likes) {
-        this.likes = likes;
-    } 
+    /*
+     * public Set<Student> getLikes() {
+     * return likes;
+     * }
+     * 
+     * public void setLikes(Set<Student> likes) {
+     * this.likes = likes;
+     * }
      */
-    
 
 }
