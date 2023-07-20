@@ -104,7 +104,6 @@ public class StudentService {
             student.setPhone(phone);
         }
 
-
         if (dob != null &&
                 dob.lengthOfYear() > 0 && !Objects.equals(student.getDob(), dob)) {
             student.setDob(dob);
@@ -114,8 +113,8 @@ public class StudentService {
     }
 
     @Transactional
-    public void addCourse(Long studentId,
-
+    public void addCourse(
+            Long studentId,
             String courseId) {
         Student student = studentRepository.findById(studentId)
                 .orElseThrow(() -> new IllegalStateException(

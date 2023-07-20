@@ -3,28 +3,15 @@ package com.example.demo.student;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Set;
-
-import org.springframework.boot.autoconfigure.amqp.RabbitConnectionDetails.Address;
-
 import com.example.demo.course.Course;
-
 import jakarta.persistence.*;
-
 
 @Entity
 @Table
-
 public class Student {
     @Id
-    @SequenceGenerator( name = "student_sequence", 
-                        sequenceName = "student_sequence", 
-                        allocationSize = 1)
-    @GeneratedValue(
-        strategy = GenerationType.SEQUENCE,
-        generator = "student_sequence"
-    )
-
-
+    @SequenceGenerator(name = "student_sequence", sequenceName = "student_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "student_sequence")
 
     private Long id;
     private String name;
@@ -37,25 +24,24 @@ public class Student {
     private Integer age;
 
     public Student() {
-        
+
     }
 
-    public Student(Long id, String name, String email, String phone, LocalDate dob,String address) {
+    public Student(Long id, String name, String email, String phone, LocalDate dob, String address) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.dob = dob;
-        this.address=address;
+        this.address = address;
     }
 
-
-    public Student( String name, String email,String phone, LocalDate dob,String address){
+    public Student(String name, String email, String phone, LocalDate dob, String address) {
         this.name = name;
         this.email = email;
         this.dob = dob;
-        this.address=address;
-       this.phone = phone;
+        this.address = address;
+        this.phone = phone;
     }
 
     public Long getId() {
@@ -99,8 +85,7 @@ public class Student {
     }
 
     @ManyToMany
-    @JoinTable ( name = "student_course",
-    joinColumns = @JoinColumn(name = "cid"))
+    @JoinTable(name = "student_course", joinColumns = @JoinColumn(name = "cid"))
     Set<Course> myCourses;
 
     public Set<Course> getMyCourses() {
@@ -110,8 +95,6 @@ public class Student {
     public void setMyCourses(Set<Course> myCourses) {
         this.myCourses = myCourses;
     }
-
-    
 
     @Override
     public String toString() {
@@ -133,10 +116,5 @@ public class Student {
     public void setAddress(String address) {
         this.address = address;
     }
-
-
-
-
-    
 
 }
