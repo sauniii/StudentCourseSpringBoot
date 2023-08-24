@@ -26,8 +26,6 @@ body:
       label: "Expected behavior"
       description: "A clear and concise description of what you expected to happen."
       placeholder: "..."
-    validations:
-      required: false
   
   - type: textarea
     id: actual
@@ -35,8 +33,6 @@ body:
       label: "Actual Outcome"
       description: "Describe what actually occurred."
       placeholder: ...
-    validations:
-      required: false
     
     - type: textarea
     id: screenshots
@@ -44,22 +40,16 @@ body:
       label: Screenshots
       description: "Add Screenshots"
       placeholder: "..."
-    validations:
-      required: false
     
     - type: textarea
     id: moreInfo
     attributes:
       label: "Additional Information"
       description: "Share any extra information about the problem."
-      placeholder: ...
-    validations:
-      required: false
+      placeholder: "..."
     
     - type: textarea
     id: solution
     attributes:
       label: "Possible Solution"
       placeholder: "..."
-    validations:
-      required: false
