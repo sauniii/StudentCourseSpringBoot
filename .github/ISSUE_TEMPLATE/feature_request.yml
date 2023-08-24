@@ -55,8 +55,8 @@ body:
     id: dto
     attributes:
       label: "DTOs (Data Transfer Objects) (if relevant)"
-      description: "If this feature introduces new DTOs or requires specific payload formats, provide details about them." |
-       "This will be automatically formatted into code, so no need for backticks."
+      description: "If this feature introduces new DTOs or requires specific payload formats, provide details about them." 
+      description: "This will be automatically formatted into code, so no need for backticks."
       placeholder: "Describe the DTOs..."
       render: shell
 
