@@ -14,25 +14,25 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: Bug Description
+      label: "Bug Description"
       description: "A clear and concise description of what the bug is."
       placeholder: "..."
     validations:
       required: true
  
   - type: textarea
-    id: expected
+    id: expectedBehavior
     attributes:
       label: "Expected behavior"
       description: "A clear and concise description of what you expected to happen."
       placeholder: "..."
   
   - type: textarea
-    id: actual
+    id: actualOutcome
     attributes:
       label: "Actual Outcome"
       description: "Describe what actually occurred."
-      placeholder: ...
+      placeholder: "..."
     
     - type: textarea
     id: screenshots
