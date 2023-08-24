@@ -7,15 +7,15 @@ body:
   - type: markdown
     attributes:
       value: |
-        Welcome to the Revocare Bug Report!
+        ###Welcome to the Revocare Bug Report!
 
         Before you start, make sure to search the existing issues to avoid duplicates. If you're certain this is a new issue, please provide the following details:
-            - Briefly describe the bug you encountered.
-            - Describe the behavior you expected to see.
-            - Explain what actually happened.
-            - Attach any relevant screenshots.
-            - If you have any suggestions for a possible solution, please share them.
-            - Additional context or information that might help us understand the problem.
+          - Briefly describe the bug you encountered.
+          - Describe the behavior you expected to see.
+          - Explain what actually happened.
+          - Attach any relevant screenshots.
+          - If you have any suggestions for a possible solution, please share them.
+          - Additional context or information that might help us understand the problem.
   
   - type: textarea
     id: description
