@@ -70,7 +70,10 @@ body:
     id: controllers
     attributes:
       label: "Controllers "
-      description: "If this feature requires new controllers or modifications to existing ones, provide an overview of the controller functionality and how it relates to the proposed feature."
+      description: | 
+                    If this feature requires new controllers or modifications to existing ones, provide an overview of the controller functionality and how it relates to the proposed feature."
+                    
+                    This will be automatically formatted into code, so no need for backticks.
       placeholder: "Describe the role of controllers in implementing this feature..."
       render: shell
       
