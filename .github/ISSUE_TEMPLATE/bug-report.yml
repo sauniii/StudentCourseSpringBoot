@@ -34,21 +34,21 @@ body:
       description: "Describe what actually occurred."
       placeholder: "..."
     
-    - type: textarea
+  - type: textarea
     id: screenshots
     attributes:
       label: Screenshots
       description: "Add Screenshots"
       placeholder: "..."
     
-    - type: textarea
+  - type: textarea
     id: moreInfo
     attributes:
       label: "Additional Information"
       description: "Share any extra information about the problem."
       placeholder: "..."
     
-    - type: textarea
+  - type: textarea
     id: solution
     attributes:
       label: "Possible Solution"
