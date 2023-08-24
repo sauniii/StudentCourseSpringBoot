@@ -1,9 +1,7 @@
 name: Bug Report
-about: Help us improve Revocare by reporting a bug.
-description: File a bug report
+description: Help improve Revocare by reporting a bug.
 title: "[BUG]: "
 labels: ["bug"]
-assignees: ''
 
 body:
   - type: markdown
