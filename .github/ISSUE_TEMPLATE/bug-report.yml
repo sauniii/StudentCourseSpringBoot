@@ -38,7 +38,10 @@ body:
     id: screenshots
     attributes:
       label: Screenshots
-      description: "Add Screenshots of the bug"
+      description: | 
+                    Attach Screenshots (if applicable)
+                    
+                    Tip: You can attach files by clicking this text area and then dragging files in.
       placeholder: "Attach any relevant screenshots..."
     
   - type: textarea
