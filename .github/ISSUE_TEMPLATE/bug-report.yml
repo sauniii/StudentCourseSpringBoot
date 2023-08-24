@@ -32,7 +32,7 @@ body:
     attributes:
       label: "Actual Outcome"
       description: "Describe what actually occurred."
-      placeholder: "..."
+      placeholder: "Explain the behavior that you observed..."
     
   - type: textarea
     id: screenshots
