@@ -1,0 +1,65 @@
+name: Feature Request
+description: Suggest an idea to improve Revocare.
+title: "[Feature]: "
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Welcome to the Revocare Feature Request!
+
+        Thank you for contributing to Revocare by suggesting this new feature. Before you start, please search the existing requests to avoid duplicates.
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: "Feature Description"
+      description: "Briefly describe the new feature you're suggesting."
+      placeholder: "Explain the new feature idea..."
+    validations:
+      required: true
+ 
+  - type: textarea
+    id: expectedBehavior
+    attributes:
+      label: "Expected behavior"
+      description: "What should be the behavior of the new feature?"
+      placeholder: "Describe the expected behavior..."
+  
+  - type: textarea
+    id: benefits
+    attributes:
+      label: "Benefits"
+      description: "Share the advantages this feature would offer to both the platform and its users. How does it enhance the overall experience?"
+      placeholder: "Describe the advantages of having this feature..."
+    
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: "Add Screenshots of the bug"
+      placeholder: "Attach any relevant screenshots..."
+
+  - type: textarea
+    id: entity
+    attributes:
+      label: "Entities (if relevant)"
+      description: "If this feature involves new entities or data structures, please provide a high-level overview of them."
+      placeholder: "Describe the entities or data structures involved..."
+      render: shell
+
+  - type: textarea
+    id: dto
+    attributes:
+      label: "DTOs (Data Transfer Objects) (if relevant)"
+      description: ""
+      placeholder: "..."
+      render: shell
+
+  - type: textarea
+    id: moreInfo
+    attributes:
+      label: "Additional Information"
+      description: "Any extra context or details that might help us understand the feature better."
+      placeholder: "Provide any relevant additional information..."
