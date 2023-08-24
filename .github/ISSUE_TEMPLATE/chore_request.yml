@@ -1,4 +1,4 @@
-name: Chore Request
+name: "🛠️ Chore Request"
 description: Suggest a task to improve Revocare.
 title: "[Chore]: "
 labels: ["chore"]
