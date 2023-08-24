@@ -1,0 +1,58 @@
+name: Bug Report
+about: Help us improve Revocare by reporting a bug.
+description: File a bug report
+title: "[BUG]: "
+labels: ["bug"]
+assignees: ''
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen.
+      placeholder: ...
+    validations:
+      required: false
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Outcome
+      description: Describe what actually occurred.
+      placeholder: ...
+    validations:
+      required: false
+    - type: textarea
+    id: actual
+    attributes:
+      label: Screenshots
+      description: Add Screenshots
+      placeholder: ...
+    validations:
+      required: false
+      - type: textarea
+    id: moreInfo
+    attributes:
+      label: Additional Information
+      description: Share any extra information about the problem.
+      placeholder: ...
+    validations:
+      required: false
+      id: moreInfo
+    attributes:
+      label: Possible Solution
+      placeholder: ...
+    validations:
+      required: false
