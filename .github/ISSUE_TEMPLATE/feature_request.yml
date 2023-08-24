@@ -23,7 +23,7 @@ body:
   - type: textarea
     id: expectedBehavior
     attributes:
-      label: "Expected behavior"
+      label: "Expected Behavior"
       description: "What should be the behavior of the new feature?"
       placeholder: "Describe the expected behavior..."
   
