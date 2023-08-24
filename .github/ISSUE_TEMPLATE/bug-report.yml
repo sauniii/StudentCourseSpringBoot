@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        `###Welcome to the Revocare Bug Report!`
+        "###Welcome to the Revocare Bug Report!"
 
         Before you start, make sure to search the existing issues to avoid duplicates. If you're certain this is a new issue, please provide the following details:
           - Briefly describe the bug you encountered.
