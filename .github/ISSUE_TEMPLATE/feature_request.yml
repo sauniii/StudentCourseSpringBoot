@@ -38,7 +38,7 @@ body:
     id: screenshots
     attributes:
       label: Screenshots
-      description: "Add Screenshots of the bug"
+      description: | "Add Screenshots of the bug"
                    "Tip: You can attach files by clicking this text area and then dragging files in."
       placeholder: "Attach any relevant screenshots..."
 
@@ -46,7 +46,7 @@ body:
     id: entity
     attributes:
       label: "Entities (if relevant)"
-      description: "If this feature involves new entities or data structures, please provide a high-level overview of them."
+      description: | "If this feature involves new entities or data structures, please provide a high-level overview of them."
                    "This will be automatically formatted into code, so no need for backticks."
       placeholder: "Describe the entities or data structures involved..."
       render: shell
@@ -55,7 +55,7 @@ body:
     id: dto
     attributes:
       label: "DTOs (Data Transfer Objects) (if relevant)"
-      description: "If this feature introduces new DTOs or requires specific payload formats, provide details about them." 
+      description: | "If this feature introduces new DTOs or requires specific payload formats, provide details about them." 
                    "This will be automatically formatted into code, so no need for backticks."
       placeholder: "Describe the DTOs..."
       render: shell
