@@ -53,7 +53,7 @@ body:
     id: dto
     attributes:
       label: "DTOs (Data Transfer Objects) (if relevant)"
-      description: ""
+      description: "If this feature introduces new DTOs or requires specific payload formats, provide details about them."
       placeholder: "..."
       render: shell
 
