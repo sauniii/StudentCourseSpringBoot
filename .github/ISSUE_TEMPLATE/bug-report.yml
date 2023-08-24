@@ -35,7 +35,7 @@ body:
     validations:
       required: false
     - type: textarea
-    id: actual
+    id: screenshots
     attributes:
       label: Screenshots
       description: Add Screenshots
