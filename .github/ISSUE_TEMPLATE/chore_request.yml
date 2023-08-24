@@ -26,14 +26,7 @@ body:
       label: "Expected Behavior"
       description: "What should be the outcome of completing this task?"
       placeholder: "Describe the expected outcome..."
-  
-  - type: textarea
-    id: benefits
-    attributes:
-      label: "Benefits"
-      description: "Share the advantages this task would offer to the platform and its users. How does it enhance the overall experience?"
-      placeholder: "Describe the benefits of completing this task..."
-    
+
   - type: textarea
     id: screenshots
     attributes:
@@ -43,6 +36,13 @@ body:
                     
                     Tip: You can attach files by clicking this text area and then dragging files in.
       placeholder: "Attach any relevant screenshots..."
+      
+  - type: textarea
+    id: benefits
+    attributes:
+      label: "Benefits"
+      description: "Share the advantages this task would offer to the platform and its users. How does it enhance the overall experience?"
+      placeholder: "Describe the benefits of completing this task..."
 
   - type: textarea
     id: moreInfo
