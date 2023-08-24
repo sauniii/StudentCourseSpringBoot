@@ -39,6 +39,7 @@ body:
     attributes:
       label: Screenshots
       description: "Add Screenshots of the bug"
+      description: "Tip: You can attach files by clicking this text area and then dragging files in."
       placeholder: "Attach any relevant screenshots..."
 
   - type: textarea
@@ -46,6 +47,7 @@ body:
     attributes:
       label: "Entities (if relevant)"
       description: "If this feature involves new entities or data structures, please provide a high-level overview of them."
+      description: "This will be automatically formatted into code, so no need for backticks."
       placeholder: "Describe the entities or data structures involved..."
       render: shell
 
@@ -53,10 +55,19 @@ body:
     id: dto
     attributes:
       label: "DTOs (Data Transfer Objects) (if relevant)"
-      description: "If this feature introduces new DTOs or requires specific payload formats, provide details about them."
+      description: "If this feature introduces new DTOs or requires specific payload formats, provide details about them." |
+       "This will be automatically formatted into code, so no need for backticks."
       placeholder: "Describe the DTOs..."
       render: shell
 
+  - type: textarea
+    id: controllers
+    attributes:
+      label: "Controllers "
+      description: "If this feature requires new controllers or modifications to existing ones, provide an overview of the controller functionality and how it relates to the proposed feature."
+      placeholder: "Describe the role of controllers in implementing this feature..."
+      render: shell
+      
   - type: textarea
     id: moreInfo
     attributes:
