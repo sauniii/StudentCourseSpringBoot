@@ -10,6 +10,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
+  
   - type: textarea
     id: description
     attributes:
@@ -18,6 +19,7 @@ body:
       placeholder: ...
     validations:
       required: true
+ 
   - type: textarea
     id: expected
     attributes:
@@ -26,6 +28,7 @@ body:
       placeholder: ...
     validations:
       required: false
+  
   - type: textarea
     id: actual
     attributes:
@@ -34,6 +37,7 @@ body:
       placeholder: ...
     validations:
       required: false
+    
     - type: textarea
     id: screenshots
     attributes:
@@ -42,7 +46,8 @@ body:
       placeholder: ...
     validations:
       required: false
-      - type: textarea
+    
+    - type: textarea
     id: moreInfo
     attributes:
       label: Additional Information
@@ -50,7 +55,9 @@ body:
       placeholder: ...
     validations:
       required: false
-      id: moreInfo
+    
+    - type: textarea
+    id: solution
     attributes:
       label: Possible Solution
       placeholder: ...
